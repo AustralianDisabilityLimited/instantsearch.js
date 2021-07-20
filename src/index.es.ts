@@ -11,7 +11,7 @@ import {
 import { createInfiniteHitsSessionStorageCache } from './lib/infiniteHitsCache';
 import { deprecate } from './lib/utils';
 
-type InstantSearchModule {
+type InstantSearchModule = {
   (options: InstantSearchOptions): InstantSearch;
   version: string;
 
@@ -30,7 +30,7 @@ type InstantSearchModule {
   insights: typeof insights;
   /** @deprecated */
   getInsightsAnonymousUserToken: typeof getInsightsAnonymousUserToken;
-}
+};
 
 /**
  * InstantSearch is the main component of InstantSearch.js. This object

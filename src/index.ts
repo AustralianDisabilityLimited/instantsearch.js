@@ -10,7 +10,7 @@ import * as routers from './lib/routers/index';
 import * as stateMappings from './lib/stateMappings/index';
 import { createInfiniteHitsSessionStorageCache } from './lib/infiniteHitsCache/index';
 
-type InstantSearchModule {
+type InstantSearchModule = {
   (options: InstantSearchOptions): InstantSearch;
   version: string;
 
@@ -27,7 +27,7 @@ type InstantSearchModule {
   snippet: typeof helpers.snippet;
   reverseSnippet: typeof helpers.reverseSnippet;
   insights: typeof helpers.insights;
-}
+};
 
 /**
  * InstantSearch is the main component of InstantSearch.js. This object
