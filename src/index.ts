@@ -10,7 +10,7 @@ import * as routers from './lib/routers/index';
 import * as stateMappings from './lib/stateMappings/index';
 import { createInfiniteHitsSessionStorageCache } from './lib/infiniteHitsCache/index';
 
-interface InstantSearchModule {
+type InstantSearchModule {
   (options: InstantSearchOptions): InstantSearch;
   version: string;
 

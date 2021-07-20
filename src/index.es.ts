@@ -11,7 +11,7 @@ import {
 import { createInfiniteHitsSessionStorageCache } from './lib/infiniteHitsCache';
 import { deprecate } from './lib/utils';
 
-interface InstantSearchModule {
+type InstantSearchModule {
   (options: InstantSearchOptions): InstantSearch;
   version: string;
 
