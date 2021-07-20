@@ -11,6 +11,25 @@ import * as stateMappings from './stateMappings/index';
 import { createInfiniteHitsSessionStorageCache } from './infiniteHitsCache/index';
 import { InstantSearchOptions } from '../types';
 
+interface instantsearch {
+  (options: InstantSearchOptions): InstantSearch;
+  version: string;
+
+  connectors: typeof connectors;
+  widgets: typeof widgets;
+  middlewares: typeof middlewares;
+
+  routers: typeof routers;
+  stateMappings: typeof stateMappings;
+
+  createInfiniteHitsSessionStorageCache: typeof createInfiniteHitsSessionStorageCache;
+  highlight: typeof helpers.highlight;
+  reverseHighlight: typeof helpers.reverseHighlight;
+  snippet: typeof helpers.snippet;
+  reverseSnippet: typeof helpers.reverseSnippet;
+  insights: typeof helpers.insights;
+}
+
 /**
  * InstantSearch is the main component of InstantSearch.js. This object
  * manages the widget and lets you add new ones.
@@ -25,23 +44,23 @@ import { InstantSearchOptions } from '../types';
  *
  * If you want to get up and running quickly with InstantSearch.js, have a
  * look at the [getting started](getting-started.html).
- * @function instantsearch
- * @param {InstantSearchOptions} options The options
  */
-const instantsearch = (options: InstantSearchOptions) =>
-  new InstantSearch(options);
+const instantsearch: instantsearch = options => new InstantSearch(options);
+
+instantsearch.version = version;
+
+instantsearch.connectors = connectors;
+instantsearch.widgets = widgets;
+instantsearch.middlewares = middlewares;
 
 instantsearch.routers = routers;
 instantsearch.stateMappings = stateMappings;
-instantsearch.connectors = connectors;
-instantsearch.widgets = widgets;
-instantsearch.version = version;
+
 instantsearch.createInfiniteHitsSessionStorageCache = createInfiniteHitsSessionStorageCache;
 instantsearch.highlight = helpers.highlight;
 instantsearch.reverseHighlight = helpers.reverseHighlight;
 instantsearch.snippet = helpers.snippet;
 instantsearch.reverseSnippet = helpers.reverseSnippet;
 instantsearch.insights = helpers.insights;
-instantsearch.middlewares = middlewares;
 
 export default instantsearch;

@@ -19,7 +19,22 @@ describe('instantsearch()', () => {
     });
   });
 
-  it('includes the highlight helper function', () => {
-    expect(instantsearch.highlight).toBeInstanceOf(Function);
+  it('includes the helper functions', () => {
+    expect(Object.keys(instantsearch)).toMatchInlineSnapshot(`
+      Array [
+        "version",
+        "connectors",
+        "widgets",
+        "middlewares",
+        "routers",
+        "stateMappings",
+        "createInfiniteHitsSessionStorageCache",
+        "highlight",
+        "reverseHighlight",
+        "snippet",
+        "reverseSnippet",
+        "insights",
+      ]
+    `);
   });
 });
