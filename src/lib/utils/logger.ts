@@ -12,7 +12,8 @@ type Warning = {
  */
 let deprecate = <TCallback extends (...args: any[]) => any>(
   fn: TCallback,
-  // @ts-ignore (message is used in the __DEV__ branch)
+  // @ts-ignore this parameter is used in the __DEV__ branch
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   message: string
 ) => fn;
 

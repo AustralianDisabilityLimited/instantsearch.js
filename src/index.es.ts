@@ -11,7 +11,7 @@ import {
 import { createInfiniteHitsSessionStorageCache } from './lib/infiniteHitsCache';
 import { deprecate } from './lib/utils';
 
-interface instantsearch {
+interface InstantSearchModule {
   (options: InstantSearchOptions): InstantSearch;
   version: string;
 
@@ -47,7 +47,8 @@ interface instantsearch {
  * If you want to get up and running quickly with InstantSearch.js, have a
  * look at the [getting started](getting-started.html).
  */
-const instantsearch: instantsearch = options => new InstantSearch(options);
+const instantsearch: InstantSearchModule = options =>
+  new InstantSearch(options);
 
 instantsearch.version = version;
 
