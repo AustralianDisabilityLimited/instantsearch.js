@@ -54,23 +54,23 @@ instantsearch.version = version;
 
 instantsearch.createInfiniteHitsSessionStorageCache = deprecate(
   createInfiniteHitsSessionStorageCache,
-  "import { createInfiniteHitsSessionStorageCache } from 'instantsearch.js/es/'"
+  "import { createInfiniteHitsSessionStorageCache } from 'instantsearch.js/es'"
 );
 instantsearch.highlight = deprecate(
   highlight,
-  "import { highlight } from 'instantsearch.js/es/'"
+  "import { highlight } from 'instantsearch.js/es'"
 );
 instantsearch.reverseHighlight = deprecate(
   reverseHighlight,
-  "import { reverseHighlight } from 'instantsearch.js/es/'"
+  "import { reverseHighlight } from 'instantsearch.js/es'"
 );
 instantsearch.snippet = deprecate(
   snippet,
-  "import { snippet } from 'instantsearch.js/es/'"
+  "import { snippet } from 'instantsearch.js/es'"
 );
 instantsearch.reverseSnippet = deprecate(
   reverseSnippet,
-  "import { reverseSnippet } from 'instantsearch.js/es/'"
+  "import { reverseSnippet } from 'instantsearch.js/es'"
 );
 instantsearch.insights = insights;
 instantsearch.getInsightsAnonymousUserToken = getInsightsAnonymousUserToken;
