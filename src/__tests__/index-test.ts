@@ -19,7 +19,7 @@ describe('instantsearch()', () => {
     });
   });
 
-  it('includes the helper functions', () => {
+  it('includes the API and the helper functions', () => {
     expect(Object.keys(instantsearch)).toMatchInlineSnapshot(`
       Array [
         "version",
