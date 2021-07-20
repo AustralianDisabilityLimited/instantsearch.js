@@ -6,7 +6,7 @@ import { createWidget } from '../../../test/mock/createWidget';
 import { runAllMicroTasks } from '../../../test/utils/runAllMicroTasks';
 import { Router, Widget, UiState, StateMapping, RouteState } from '../../types';
 import historyRouter from '../routers/history';
-import instantsearch from '../main';
+import instantsearch from '../..';
 
 const createFakeRouter = (args: Partial<Router> = {}): Router => ({
   onUpdate(..._args) {},
