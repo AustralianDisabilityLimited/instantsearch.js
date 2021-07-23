@@ -16,7 +16,6 @@ import {
   Connector,
   Hits,
   Hit,
-  AlgoliaHit,
   WidgetRenderState,
 } from '../../types';
 import { SearchResults } from 'algoliasearch-helper';
@@ -35,7 +34,7 @@ export type HitsRenderState = {
   /**
    * The response from the Algolia API.
    */
-  results?: SearchResults<AlgoliaHit>;
+  results?: SearchResults<Hit>;
 
   /**
    * Sends an event to the Insights middleware.
@@ -211,3 +210,12 @@ const connectHits: HitsConnector = function connectHits(
 };
 
 export default connectHits;
+
+connectHits(
+  (state, isFirstRender ) => {
+    console.log(isFirstRender, state)
+    const firstHit = state.hits[0]
+    const firstHit = state.results.hits
+
+  },
+} , () => {});
